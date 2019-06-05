@@ -14,7 +14,7 @@ public class HelloFilter implements Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		System.out.println("Filter ‰Šú‰»");
+		System.out.println("Filter Init!");
 	}
 
 	@Override
@@ -27,6 +27,6 @@ public class HelloFilter implements Filter {
 
 	@Override
 	public void destroy() {
-		System.out.println("Filter I—¹");
+		System.out.println("Filter Destory!");
 	}
 }
