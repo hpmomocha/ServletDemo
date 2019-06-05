@@ -3,6 +3,10 @@
 						 "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
 
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+	
 	<filter>
 		<filter-name>helloFilter</filter-name>
 		<filter-class>demo.HelloFilter</filter-class>
@@ -30,6 +34,12 @@
 		<servlet-class>demo.HelloIncludeServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>create_code</servlet-name>
+		<servlet-class>demo.CreateCodeServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>hello_world</servlet-name>
@@ -44,6 +54,11 @@
 	<servlet-mapping>
 		<servlet-name>hello_include</servlet-name>
 		<url-pattern>/helloInclude</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>create_code</servlet-name>
+		<url-pattern>/createCode</url-pattern>
 	</servlet-mapping>
 
 </web-app>
